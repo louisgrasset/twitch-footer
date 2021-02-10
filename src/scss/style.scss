@@ -59,10 +59,14 @@ footer {
         width: 8rem;
         li {
           margin-left: 0;
-          margin-bottom: 1rem;
+          margin-bottom: 1.2rem;
+          a {
+            font-weight: 600;
+          }
           &:first-child {
             a {
               font-size: 0.85rem;
+              font-weight: 700;
             }
           }
         }
@@ -112,6 +116,7 @@ footer {
     }
     a, span {
       font-size: 0.85rem;
+      font-weight: 700;
       color: var(--primary-lighten);
     }
     .links {
