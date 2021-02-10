@@ -1,0 +1,23 @@
+{
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "serve": "^11.3.2"
+  },
+  "scripts": {
+    "watch": "node-sass -w ./src/scss/style.scss -o ./src/css --style compressed",
+    "build": "node-sass ./src/scss/style.scss -o ./src/css --style compressed",
+    "publish": "npm run build && mkdir -p ./public && npm run copy",
+    "serve": "serve ./src/",
+    "dev": "concurrently --kill-others \"npm run watch\" \"npm run serve\"",
+    "copy": "npm run copyStyles && npm run copyScripts && npm run copyImages && npm run copyFonts && npm run copyTemplates",
+    "copyStyles": "cp -R ./src/css ./public",
+    "copyScripts": "cp -R ./src/js ./public",
+    "copyImages": "cp -R ./src/img ./public",
+    "copyFonts": "cp -R ./src/fonts ./public",
+    "copyTemplates": "cp -R ./src/*.html ./public"
+  }
+}
