@@ -62,7 +62,20 @@ footer {
           margin-left: 0;
           margin-bottom: 1.2rem;
           a {
+            vertical-align: baseline;
             font-weight: 600;
+            &.external {
+              &::after {
+                content: '';
+                position: absolute;
+                margin-top: .5rem;
+                margin-left: .5rem;
+                height: .8rem;
+                width: .8rem;
+                background-image: url('../img/external.svg');
+                background-size: cover;
+              }
+            } 
           }
           &:first-child {
             a {
