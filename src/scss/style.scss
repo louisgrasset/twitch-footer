@@ -22,7 +22,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   max-width: 1600px;
-  margin: 0 auto; 
+  margin: 0 auto;
   @media screen and (max-width: 1660px) {
     max-width: 1400px;
     padding: 0 3rem;
@@ -46,9 +46,6 @@ footer {
       grid-template-columns: unset;
       grid-template-rows: 2;
       row-gap: 3rem;
-    }
-    .trademark {
-
     }
     .content {
       display: grid;
@@ -75,7 +72,7 @@ footer {
                 background-image: url('../img/external.svg');
                 background-size: cover;
               }
-            } 
+            }
           }
           &:first-child {
             a {
